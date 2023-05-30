@@ -18,8 +18,8 @@ Apply data visualization techniques to identify the patterns of the data.
 
 
 # CODE
-Developed by: Viswa Priya G
-Register no: 212221220061
+### Developed by: Viswa Priya G
+### Register no: 212221220061
 
 import pandas as pd
 import numpy as np
@@ -31,6 +31,7 @@ df.head()
 df.info()
 
 #removing unnecessary data variables
+
 df.drop('Row ID',axis=1,inplace=True)
 df.drop('Order ID',axis=1,inplace=True)
 df.drop('Customer ID',axis=1,inplace=True)
@@ -47,6 +48,7 @@ df
 df.isnull().sum()
 
 #detecting and removing outliers
+
 plt.figure(figsize=(8,8))
 plt.title("Data with outliers")
 df.boxplot()
@@ -63,7 +65,7 @@ df.boxplot()
 plt.show()
 
 #data visualization
-Which segment has highest sales?
+# Which segment has highest sales?
 sns.lineplot(x="Segment",y="Sales",data=df,marker='o')
 plt.title("Segment vs Sales")
 plt.xticks(rotation = 90)
@@ -73,7 +75,7 @@ sns.barplot(x="Segment",y="Sales",data=df)
 plt.xticks(rotation = 90)
 plt.show()
 
-Which city has highest profit?
+# Which city has highest profit?
 df.shape
 df1 = df[(df.Profit >= 60)]
 df1.shape
@@ -86,7 +88,7 @@ plt.xlabel=("City")
 plt.ylabel=("Profit")
 plt.show()
 
-Which ship mode is profitable?
+# Which ship mode is profitable?
 sns.barplot(x="Ship Mode",y="Profit",data=df)
 plt.show()
 
@@ -97,7 +99,7 @@ sns.violinplot(x="Profit",y="Ship Mode",data=df)
 
 sns.pointplot(x=df["Profit"],y=df["Ship Mode"])
 
-Sales of the product based on region
+# Sales of the product based on region
 states=df.loc[:,["Region","Sales"]]
 states=states.groupby(by=["Region"]).sum().sort_values(by="Sales")
 sns.barplot(x=states.index,y="Sales",data=states)
@@ -107,9 +109,10 @@ plt.ylabel=("Sales")
 plt.show()
 
 #pie chart
+
 df.groupby(['Region']).sum().plot(kind='pie', y='Sales',figsize=(6,9),pctdistance=1.7,labeldistance=1.2)
 
-Find the relation between sales and profit
+# Find the relation between sales and profit
 df["Sales"].corr(df["Profit"])
 
 df_corr = df.copy()
@@ -117,14 +120,16 @@ df_corr = df_corr[["Sales","Profit"]]
 df_corr.corr()
 
 #pair plot
+
 sns.pairplot(df_corr, kind="scatter")
 plt.show()
 
-Heatmap
+# Heatmap
 
 df4=df.copy()
 
 #encoding
+
 from sklearn.preprocessing import LabelEncoder,OrdinalEncoder,OneHotEncoder
 le=LabelEncoder()
 ohe=OneHotEncoder
@@ -139,21 +144,24 @@ df4["Category"]=oe.fit_transform(df[["Category"]])
 df4["Sub-Category"]=le.fit_transform(df[["Sub-Category"]])
 
 #scaling
+
 from sklearn.preprocessing import RobustScaler
 sc=RobustScaler()
 df5=pd.DataFrame(sc.fit_transform(df4),columns=['Ship Mode', 'Segment', 'City', 'State','Region',
                                                'Category','Sub-Category','Sales','Quantity','Discount','Profit'])
 
 #Heatmap
+
 plt.subplots(figsize=(12,7))
 sns.heatmap(df5.corr(),cmap="PuBu",annot=True)
 plt.show()
 
-Find the relation between sales and profit based on the following category.
+# Find the relation between sales and profit based on the following category.
 
 Segment
+
 grouped_data = df.groupby('Segment')[['Sales', 'Profit']].mean()
-# Create a bar chart of the grouped data
+#Create a bar chart of the grouped data
 fig, ax = plt.subplots()
 ax.bar(grouped_data.index, grouped_data['Sales'], label='Sales')
 ax.bar(grouped_data.index, grouped_data['Profit'], bottom=grouped_data['Sales'], label='Profit')
@@ -163,8 +171,9 @@ ax.legend()
 plt.show()
 
 City
+
 grouped_data = df.groupby('City')[['Sales', 'Profit']].mean()
-# Create a bar chart of the grouped data
+#Create a bar chart of the grouped data
 fig, ax = plt.subplots()
 ax.bar(grouped_data.index, grouped_data['Sales'], label='Sales')
 ax.bar(grouped_data.index, grouped_data['Profit'], bottom=grouped_data['Sales'], label='Profit')
@@ -174,8 +183,9 @@ ax.legend()
 plt.show()
 
 States
+
 grouped_data = df.groupby('State')[['Sales', 'Profit']].mean()
-# Create a bar chart of the grouped data
+#Create a bar chart of the grouped data
 fig, ax = plt.subplots()
 ax.bar(grouped_data.index, grouped_data['Sales'], label='Sales')
 ax.bar(grouped_data.index, grouped_data['Profit'], bottom=grouped_data['Sales'], label='Profit')
@@ -185,9 +195,10 @@ ax.legend()
 plt.show()
 
 Segment and Ship mode
+
 grouped_data = df.groupby(['Segment', 'Ship Mode'])[['Sales', 'Profit']].mean()
 pivot_data = grouped_data.reset_index().pivot(index='Segment', columns='Ship Mode', values=['Sales', 'Profit'])
-# Create a bar chart of the grouped data
+#Create a bar chart of the grouped data
 fig, ax = plt.subplots()
 pivot_data.plot(kind='bar', ax=ax)
 ax.set_xlabel('Segment')
@@ -196,6 +207,7 @@ plt.legend(title='Ship Mode')
 plt.show()
 
 Segment,ship mode and region
+
 grouped_data = df.groupby(['Segment', 'Ship Mode','Region'])[['Sales', 'Profit']].mean()
 pivot_data = grouped_data.reset_index().pivot(index=['Segment', 'Ship Mode'], columns='Region', values=['Sales', 'Profit'])
 sns.set_style("whitegrid")
