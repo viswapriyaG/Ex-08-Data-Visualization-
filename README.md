@@ -235,7 +235,8 @@ Updated dataset
 ![op8](https://github.com/viswapriyaG/Ex-08-Data-Visualization-/assets/131427787/2cb6e339-5d9b-40b9-9010-e7a32c655d0b)
 
 Which segment has highest sales?
-![op9](https://github.com/viswapriyaG/Ex-08-Data-Visualization-/assets/131427787/b9a6b415-84fa-45ba-937b-93c194f3fe54)
+![op9](https://github.com/viswapriyaG/Ex-08-Data-Visualization-/assets/131427787/de5ff641-4ea9-4c71-9475-efaf02002820)
+
 ![op10](https://github.com/viswapriyaG/Ex-08-Data-Visualization-/assets/131427787/cbba0805-72f3-4c2e-af1e-2c6d105cb7ed)
 
 Which city has highest profit?
