@@ -218,6 +218,61 @@ plt.ylabel('Value')
 plt.legend(title='Region')
 plt.show()
 
+
 # OUPUT
 Initial dataset
 
+![op1](https://github.com/viswapriyaG/Ex-08-Data-Visualization-/assets/131427787/a1cbf54a-f482-4243-942a-2e42140df3c5)
+![op2](https://github.com/viswapriyaG/Ex-08-Data-Visualization-/assets/131427787/19f87952-08e5-4b32-be25-948e0e52221c)
+![op3](https://github.com/viswapriyaG/Ex-08-Data-Visualization-/assets/131427787/efe1aaa7-507a-498d-8159-8ee34f2a6ad5)
+![op4](https://github.com/viswapriyaG/Ex-08-Data-Visualization-/assets/131427787/8a3bf347-efcf-4d5c-97b2-5e266240019e)
+
+Updated dataset
+![op5](https://github.com/viswapriyaG/Ex-08-Data-Visualization-/assets/131427787/4c68ecf8-afc5-4764-bfe5-59e522a6a80a)
+![op6](https://github.com/viswapriyaG/Ex-08-Data-Visualization-/assets/131427787/f666b89c-3fde-43f5-bd04-b5eaba2280e8)
+
+![op7](https://github.com/viswapriyaG/Ex-08-Data-Visualization-/assets/131427787/ace91567-dd85-4725-b06d-1c9fc2fb734b)
+![op8](https://github.com/viswapriyaG/Ex-08-Data-Visualization-/assets/131427787/2cb6e339-5d9b-40b9-9010-e7a32c655d0b)
+
+Which segment has highest sales?
+![op9](https://github.com/viswapriyaG/Ex-08-Data-Visualization-/assets/131427787/b9a6b415-84fa-45ba-937b-93c194f3fe54)
+![op10](https://github.com/viswapriyaG/Ex-08-Data-Visualization-/assets/131427787/cbba0805-72f3-4c2e-af1e-2c6d105cb7ed)
+
+Which city has highest profit?
+![op11](https://github.com/viswapriyaG/Ex-08-Data-Visualization-/assets/131427787/3b4dc8fe-5cee-4d1c-8cf3-6cc992628f35)
+
+Profitable ship mode
+![op12](https://github.com/viswapriyaG/Ex-08-Data-Visualization-/assets/131427787/7c049251-c193-4463-b0aa-af72b7aa77a0)
+![op13](https://github.com/viswapriyaG/Ex-08-Data-Visualization-/assets/131427787/49abbbd0-0488-4c59-a4fd-ffb85e19de42)
+![op14](https://github.com/viswapriyaG/Ex-08-Data-Visualization-/assets/131427787/3ddbb46d-5d7b-450b-9b4a-8a4be747eb0f)
+![op15](https://github.com/viswapriyaG/Ex-08-Data-Visualization-/assets/131427787/be3aa34a-9658-451b-a568-7c870b03820e)
+
+Sales of the product based on region
+![op16](https://github.com/viswapriyaG/Ex-08-Data-Visualization-/assets/131427787/6d932e87-edbf-42c3-b45b-5a3d7ba04397)
+![op17](https://github.com/viswapriyaG/Ex-08-Data-Visualization-/assets/131427787/e3807c68-1d93-48da-a55d-8c92ac553c95)
+
+Relation between sales and profit
+![op18](https://github.com/viswapriyaG/Ex-08-Data-Visualization-/assets/131427787/61f86614-8bb7-4d7e-917b-ed37ccc1bfdb)
+
+Heatmap
+![op19](https://github.com/viswapriyaG/Ex-08-Data-Visualization-/assets/131427787/1f9cc61d-6219-499e-8e71-7aa72a1cf13e)
+
+Relation Between Sales And Profit Based On The Following Category
+
+1.Segment
+![op20](https://github.com/viswapriyaG/Ex-08-Data-Visualization-/assets/131427787/919be293-c9fc-425d-b200-97284c965093)
+
+2.City
+![op21](https://github.com/viswapriyaG/Ex-08-Data-Visualization-/assets/131427787/533380ac-f003-4072-a4d7-135a36475766)
+
+3.States
+![op22](https://github.com/viswapriyaG/Ex-08-Data-Visualization-/assets/131427787/016a6df5-a11e-404c-b91b-325f3e4b6ce6)
+
+4.Segment and ship mode
+![op23](https://github.com/viswapriyaG/Ex-08-Data-Visualization-/assets/131427787/82181155-5cc5-48cb-b89d-ef0dec9644aa)
+
+5.Segment,ship mode and region
+![op24](https://github.com/viswapriyaG/Ex-08-Data-Visualization-/assets/131427787/70709c99-06ae-4778-924a-d08f1589d83c)
+
+# RESULT:
+Thus using the given dataset data visualization is performed for following questions.
