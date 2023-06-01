@@ -234,10 +234,10 @@ Updated dataset
 ![op7](https://github.com/viswapriyaG/Ex-08-Data-Visualization-/assets/131427787/ace91567-dd85-4725-b06d-1c9fc2fb734b)
 ![op8](https://github.com/viswapriyaG/Ex-08-Data-Visualization-/assets/131427787/2cb6e339-5d9b-40b9-9010-e7a32c655d0b)
 
-Which segment has highest sales?
-![op9](https://github.com/viswapriyaG/Ex-08-Data-Visualization-/assets/131427787/de5ff641-4ea9-4c71-9475-efaf02002820)
+Segment vs Sales
+![op9](https://github.com/viswapriyaG/Ex-08-Data-Visualization-/assets/131427787/3eb6568a-476a-43b3-9d2a-b57aee630f03)
+![op10](https://github.com/viswapriyaG/Ex-08-Data-Visualization-/assets/131427787/81d718f2-cfcc-44af-96fc-8149a25f3022)
 
-![op10](https://github.com/viswapriyaG/Ex-08-Data-Visualization-/assets/131427787/cbba0805-72f3-4c2e-af1e-2c6d105cb7ed)
 
 Which city has highest profit?
 ![op11](https://github.com/viswapriyaG/Ex-08-Data-Visualization-/assets/131427787/3b4dc8fe-5cee-4d1c-8cf3-6cc992628f35)
