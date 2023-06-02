@@ -209,6 +209,7 @@ Data Pre-Processing
 
 ![op1](https://github.com/viswapriyaG/Ex-08-Data-Visualization-/assets/131427787/a5acc49a-0b7c-49c9-82ba-13c955da64bd)
 ![op2](https://github.com/viswapriyaG/Ex-08-Data-Visualization-/assets/131427787/359ae36b-6606-4245-9c27-d5e2c41a7c32)
+
 ![op3](https://github.com/viswapriyaG/Ex-08-Data-Visualization-/assets/131427787/74bd29f2-d360-4c06-a5d4-9da09959ba1b)
 
 Updated dataset
