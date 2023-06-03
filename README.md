@@ -10,23 +10,25 @@ COLAB LINK:https://colab.research.google.com/drive/1uDi7x4gNbA0GIpAQMa38ayaOFs9G
 Data visualization is the graphical representation of information and data. By using visual elements like charts, graphs, and maps, data visualization tools provide an accessible way to see and understand trends, outliers, and patterns in data.
 
 # ALGORITHM
-STEP 1
+## STEP 1
 Read the given Data
 
-STEP 2
+## STEP 2
 Clean the Data Set using Data Cleaning Process
 
-STEP 3
+## STEP 3
 Apply Feature generation and selection techniques to all the features of the data set
 
-STEP 4
+## STEP 4
 Apply data visualization techniques to identify the patterns of the data.
 
 # CODE
 DEVELOPED BY: VISWA PRIYA G
+
 REGISTER NUMBER: 212221220061
 
 Data Pre-Processing
+
 ```
 import pandas as pd
 import numpy as np
@@ -53,12 +55,17 @@ df.drop('Ship Date',axis=1,inplace=True)
 print("Updated dataset")
 df
 df.isnull().sum()
+```
+Finding outliers
 
+```
 plt.figure(figsize=(8,8))
 plt.title("Data with outliers")
 df.boxplot()
 plt.show()
-
+```
+Removing outliers
+```
 plt.figure(figsize=(8,8))
 cols = ['Sales','Quantity','Discount','Profit']
 Q1 = df[cols].quantile(0.25)
@@ -68,8 +75,9 @@ df = df[~((df[cols] < (Q1 - 1.5 * IQR)) |(df[cols] > (Q3 + 1.5 * IQR))).any(axis
 plt.title("Dataset after removing outliers")
 df.boxplot()
 plt.show()
-
+```
 Segment With Highest Sales
+
 ```
 sns.lineplot(x="Segment",y="Sales",data=df,marker='o')
 plt.title("Segment vs Sales")
@@ -81,6 +89,7 @@ plt.xticks(rotation = 90)
 plt.show()
 ```
 City with Highest Profit
+
 ```
 df.shape
 df1 = df[(df.Profit >= 60)]
@@ -95,7 +104,9 @@ plt.xlabel=("City")
 plt.ylabel=("Profit")
 plt.show()
 ```
+
 Profitable Ship Mode
+
 ```
 sns.barplot(x="Ship Mode",y="Profit",data=df)
 plt.show()
@@ -107,7 +118,9 @@ sns.violinplot(x="Profit",y="Ship Mode",data=df)
 
 sns.pointplot(x=df["Profit"],y=df["Ship Mode"])
 ```
+
 Sales Of The Product Based On Region
+
 ```
 states=df.loc[:,["Region","Sales"]]
 states=states.groupby(by=["Region"]).sum().sort_values(by="Sales")
@@ -128,7 +141,9 @@ df_corr.corr()
 sns.pairplot(df_corr, kind="scatter")
 plt.show()
 ```
+
 Heatmap
+
 ```
 df4=df.copy()
 
@@ -154,9 +169,11 @@ plt.subplots(figsize=(12,7))
 sns.heatmap(df5.corr(),cmap="PuBu",annot=True)
 plt.show()
 ```
+
 Relation Between Sales And Profit Based On The Following Category
 
 Segment
+
 ```
 grouped_data = df.groupby('Segment')[['Sales', 'Profit']].mean()
 fig, ax = plt.subplots()
@@ -167,7 +184,9 @@ ax.set_ylabel('Value')
 ax.legend()
 plt.show()
 ```
+
 City
+
 ```
 grouped_data = df.groupby('City')[['Sales', 'Profit']].mean()
 fig, ax = plt.subplots()
@@ -178,7 +197,9 @@ ax.set_ylabel('Value')
 ax.legend()
 plt.show()
 ```
+
 States
+
 ```
 grouped_data = df.groupby('State')[['Sales', 'Profit']].mean()
 fig, ax = plt.subplots()
@@ -189,7 +210,9 @@ ax.set_ylabel('Value')
 ax.legend()
 plt.show()
 ```
+
 Segment and Ship Mode
+
 ```
 grouped_data = df.groupby(['Segment', 'Ship Mode'])[['Sales', 'Profit']].mean()
 pivot_data = grouped_data.reset_index().pivot(index='Segment', columns='Ship Mode', values=['Sales', 'Profit'])
@@ -200,7 +223,9 @@ ax.set_ylabel('Value')
 plt.legend(title='Ship Mode')
 plt.show()
 ```
+
 Segment, Ship mode and Region
+
 ```
 grouped_data = df.groupby(['Segment', 'Ship Mode','Region'])[['Sales', 'Profit']].mean()
 pivot_data = grouped_data.reset_index().pivot(index=['Segment', 'Ship Mode'], columns='Region', values=['Sales', 'Profit'])
@@ -212,6 +237,7 @@ plt.ylabel('Value')
 plt.legend(title='Region')
 plt.show()
 ```
+
 # OUPUT
 Data Pre-Processing
 
